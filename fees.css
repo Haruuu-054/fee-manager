@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #094069, #438FC8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .header h1 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 10px 0 0;
+    background-color: #D9D9D9;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .month-box {
+    background: #D9D9D9;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .month-container{
+    font-size: 8px;
+  }
+  
+  .fees-section {
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .fees-item {
+    display: flex;
+    align-items: center;
+    background: #D9D9D9;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .fees-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .fees-item .icon {
+    width: 40px;
+    height: 40px;
+    background: #7896AB;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .fees-item button {
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    flex: 1;
+  }
+  
+  .fees-item button:hover {
+    text-decoration: underline;
+  }
+  
+  .calendar {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 400px; /* Maximum width for larger screens */
+    padding: 20px;
+    text-align: center;
+    height: auto;
+  }
+  
+  .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .days {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .dates {
+    font-size: 8px; /* Set font size to 8px for dates */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for calendar dates */
+    gap: 2px; /* Reduce the gap between date buttons */
+    padding: 0; /* Remove extra padding */
+  }
+  
+  button {
+    background: #f0f0f0;
+    border: none;
+    width: 100%; /* Fill the grid cell */
+    aspect-ratio: 1; /* Ensure the buttons are square */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 8px; /* Set font size for dates to 8px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Ensure buttons don't have extra margin */
+  }
+  
+  button.today {
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background: #007bff;
+    color: white;
+  }
+  
+  /* RESPONSIVENESS */
+  
+  /* For small screens (e.g., phones in portrait mode) */
+  @media (max-width: 400px) {
+    .calendar {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .dates {
+      gap: 1px; /* Reduce the gap for smaller screens */
+    }
+  
+    button {
+      width: 30px; /* Adjust width for small screens */
+      height: 30px; /* Adjust height for small screens */
+      font-size: 8px; /* Keep date font size at 8px */
+    }
+  }
+  
+  /* For larger screens (e.g., tablets or desktops) */
+  @media (min-width: 768px) {
+    .calendar {
+      padding: 20px; /* Increase padding for larger screens */
+    }
+  
+    .dates {
+      gap: 4px; /* Increase the gap for larger screens */
+    }
+  
+    button {
+      width: 50px; /* Larger size for bigger screens */
+      height: 50px;
+      font-size: 12px; /* Increase font size for larger screens */
+    }
+  }
+  
+  

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees Manager Layout</title>
+  <link rel="stylesheet" href="fees.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="images/undraw_no_data_re_kwbl.svg" alt="Fees Manager Logo">
+      <h1>FEES MANAGER</h1>
+    </div>
+    <div class="month-box">
+      <p id="month-container">MONTH</p>
+      <div class="calendar">
+        <div class="month">
+          <a href="#" class="nav"><i class="fas fa-angle-left"></i></a>
+          <div>
+            <span id="month-name">January</span> <span class="year" id="year">2019</span>
+          </div>
+          <a href="#" class="nav"><i class="fas fa-angle-right"></i></a>
+        </div>
+        <div class="days">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+        </div>
+        <div class="dates" id="dates"></div>
+      </div>
+    </div>
+    <div class="fees-section">
+      <p id="payment-title">FEES</p>
+      <div class="fees-item">
+        <div class="icon"></div>
+        <button>CREATE A PAYMENT NOTE</button>
+      </div>
+      <div class="fees-item">
+        <div class="icon"></div>
+        <button>PAYMENT NOTE 1</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="fee.js"></script>
+</html>
