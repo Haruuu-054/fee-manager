@@ -8,9 +8,9 @@
 </head>
 <body>
   <div class="container">
+    <div class="content-wrapper">
     <div class="header">
-      <img src="undraw_no_data_re_kwbl.svg" alt="Fees Manager Logo">
-      <h1>FEES MANAGER</h1>
+      <h1><img src="images/undraw_no_data_re_kwbl.svg" alt="Fees Manager Logo" class="logo">  FEES MANAGER</h1>
     </div>
     <div class="month-box">
       <p id="month-container">MONTH</p>
@@ -37,13 +37,53 @@
     <div class="fees-section">
       <p id="payment-title">FEES</p>
       <div class="fees-item">
-        <div class="icon"></div>
-        <button>CREATE A PAYMENT NOTE</button>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exposure" viewBox="0 0 16 16">
+            <path d="M8.5 4a.5.5 0 0 0-1 0v2h-2a.5.5 0 0 0 0 1h2v2a.5.5 0 0 0 1 0V7h2a.5.5 0 0 0 0-1h-2zm-3 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8"/>
+          </svg>
+        </div>
+        <button class="create">CREATE A PAYMENT NOTE</button>
       </div>
       <div class="fees-item">
-        <div class="icon"></div>
-        <button>PAYMENT NOTE 1</button>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
+            <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1"/>
+          </svg>
+        </div>
+        <button id="payment">PAYMENT NOTE 1</button>
       </div>
+    </div>
+  </div>
+    <!-- The container to be shown -->
+    <div class="create-container" style="display: none;">
+      <div class="create-payment-note">
+        <div class="create-container">
+          <br>
+          <form class="form">
+            <p class="title">Register </p>
+            <p class="message">Create a payment note to keep track of your bills </p>
+                <div class="flex">
+                <label>
+                    <input class="input" type="text" placeholder="" required="">
+                    <span>Fee name:</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input class="input" type="number" placeholder="" required="">
+                <span>Initial payment:</span>
+            </label> 
+                
+            <label>
+                <input class="input" type="number" placeholder="" required="">
+                <span>Total bill amount</span>
+            </label>
+            <button class="submit">Submit</button>
+            <button class="home">Home</button>
+          </form>
+          </div>
+        </div>
     </div>
   </div>
 </body>
