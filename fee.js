@@ -41,3 +41,34 @@ function generateCalendar() {
 
 // Initialize calendar
 generateCalendar();
+
+const create = document.querySelector(".create"); // Button to trigger the event
+const createContainer = document.querySelector(".create-container"); // The container to show
+const contentWrapper = document.querySelector(".content-wrapper"); // All other content
+
+create.addEventListener("click", function () {
+    contentWrapper.style.display = "none"; // Hide all other content
+    createContainer.style.display = "block"; // Show the create container
+});
+
+    // Get the buttons and form
+    const homeButton = document.querySelector('.home');
+    const submitButton = document.querySelector('.submit');
+    const form = document.querySelector('.form');
+
+    // Home button handler - remove required attributes
+    homeButton.addEventListener('click', function() {
+      // Remove the required attribute from input fields
+      form.querySelectorAll('input').forEach(input => input.removeAttribute('required'));
+      // Optionally, you can hide the form or reset it after returning home
+      document.querySelector('.create-container').style.display = 'none'; // Hide form
+    });
+
+    // Submit button handler - enforce required fields
+    submitButton.addEventListener('click', function(event) {
+      // Check if the form is valid
+      if (!form.checkValidity()) {
+        event.preventDefault(); // Prevent form submission if any field is invalid
+        alert('Please fill in all required fields!');
+      }
+    });
