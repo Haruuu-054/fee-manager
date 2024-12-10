@@ -7,34 +7,46 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margins */
+    background-color: #f5f5f5; /* Optional background color */
+    box-sizing: border-box; /* Include padding and border in dimensions */
   }
   
   .container {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     border-radius: 20px;
     padding: 20px;
   }
   
   .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .header img {
-    width: 50px;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #D9D9D9; /* A dark blue background color for the header */
+    color: black;
+    border-radius: 8px;
+    margin-bottom: 1rem;
   }
   
   .header h1 {
-    font-size: 12px;
-    font-weight: 600;
-    margin: 10px 0 0;
-    background-color: #D9D9D9;
-    color: black;
-    padding: 10px;
-    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 15px; /* Add some space between the image and the text */
+    justify-content: center;
+    align-items: center;
   }
+  
+  .logo {
+    height: 30px; /* Adjust the logo size */
+    width: auto;
+  }
+  
   
   .month-box {
     background: #D9D9D9;
@@ -75,6 +87,11 @@ body {
     border-radius: 50%;
     margin-right: 15px;
   }
+
+  svg{
+    width: 40px;
+    height: 40px;
+  }
   
   .fees-item button {
     background: transparent;
@@ -87,11 +104,11 @@ body {
   }
   
   .fees-item button:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   .calendar {
-    background: #fff;
+    background: #7896AB;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 90%; /* Use percentage for responsiveness */
@@ -99,18 +116,22 @@ body {
     padding: 20px;
     text-align: center;
     height: auto;
+    margin-left: 0.5rem;
   }
   
   .month {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     font-size: 12px;
     font-weight: bold;
+    color: white;
   }
   
   .days {
+    color: white;
     font-size: 10px;
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
@@ -119,6 +140,7 @@ body {
   }
   
   .dates {
+    color: white; /* Set date text color to white */
     font-size: 8px; /* Set font size to 8px for dates */
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 7 columns for calendar dates */
@@ -127,7 +149,6 @@ body {
   }
   
   button {
-    background: #f0f0f0;
     border: none;
     width: 100%; /* Fill the grid cell */
     aspect-ratio: 1; /* Ensure the buttons are square */
@@ -138,6 +159,8 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0; /* Ensure buttons don't have extra margin */
+    background: transparent; /* Remove the background color */
+    color: white; /* Set date text color to white */
   }
   
   button.today {
@@ -151,16 +174,37 @@ body {
     color: white;
   }
   
+  
+
+  #create{
+    font-size: 8px;
+  }
+  #payment{
+    font-size: 8px;
+  }
+  .create-payment-note{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #094069, #438FC8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #home{
+    width: 80%;
+  }
   /* RESPONSIVENESS */
   
   /* For small screens (e.g., phones in portrait mode) */
   @media (max-width: 400px) {
     .calendar {
-      padding: 10px; /* Reduce padding for smaller screens */
+      padding: 8px; /* Reduce padding for smaller screens */
     }
   
     .dates {
-      gap: 1px; /* Reduce the gap for smaller screens */
+      gap: 0.5px; /* Reduce the gap for smaller screens */
     }
   
     button {
@@ -186,5 +230,78 @@ body {
       font-size: 12px; /* Increase font size for larger screens */
     }
   }
-  
-  
+  /* General Form Styles */
+      
+  .create-container {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+.form {
+  border: 1px solid #D9D9D9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; /* Adjust width for responsiveness */
+  max-width: 400px; /* Limit maximum width */
+}
+
+/* Label and Input Styling */
+.form label {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 3rem;
+}
+
+.form label .input {
+  width: 100%; /* Full width for responsiveness */
+  padding: 10px; /* Consistent padding for spacing */
+  outline: none;
+  border: 1px solid rgba(105, 105, 105, 0.5); /* Visible border */
+  border-radius: 10px; /* Matches the overall design */
+  font-size: 14px; /* Readable font size */
+  box-sizing: border-box; /* Prevents overflow */
+  background-color: #fff; /* Clear background */
+}
+
+.form label span {
+  position: absolute;
+  left: 12px; /* Align with input padding */
+  top: -18px; /* Position above the input */
+  color: white;
+  font-size: 12px; /* Smaller font size for label */
+}
+
+/* Button Styling */
+.submit {
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  padding: 10px;
+  width: 40%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home {
+  margin-top: 1rem;
+  background-color: #094069;
+  color: white;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  padding: 10px;
+  width: 40%;
+  cursor: pointer;
+  font-size: 14px;
+}
